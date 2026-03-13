@@ -47,7 +47,7 @@ def izdevas(df, result, nosaukums):
     print("Produkti:")
     for i in range(len(result.x)):
         if result.x[i] > 0:
-            print(f"{df.iloc[i, 0]}{(24-len(str(df.iloc[i, 0])))*" "}| {result.x[i] * 100 :.2f} g")
+            print(f"{df.iloc[i, 0]}{(24-len(str(df.iloc[i, 0])))*" "}| {result.x[i] * 100 :.2f} g | {df.iloc[i, 15]*result.x[i]:.2f} eur")
     print('—'*35)
     print(f'Minimālās izmaksas: {result.fun:.2f} eur')
     print('—'*35)
